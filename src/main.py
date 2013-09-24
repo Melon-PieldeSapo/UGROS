@@ -3,7 +3,7 @@ Created on 24/09/2013
 
 @author: Melon
 '''
-from gi.repository import Gtk,GtkWidget
+from gi.repository import Gtk
 
 class gui(Gtk.Window):
     def __init__(self):
@@ -13,7 +13,7 @@ class gui(Gtk.Window):
         #gtk-button-images
       
         names = ["hola","adios","cosa","cosa fea","otra cosa","bieeen"]
-        GtkWidget *img;
+        #GtkWidget *img;
         img = Gtk.Image.new_from_file('../res/ugr_logo.jpg')
         #self.box=Gtk.Box(spacing=6)
         #self.add(self.box)
