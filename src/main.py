@@ -3,7 +3,7 @@ Created on 24/09/2013
 
 @author: Melon
 '''
-from gi.repository import Gtk
+from gi.repository import *
 
 class gui(Gtk.Window):
     def __init__(self):
@@ -14,18 +14,21 @@ class gui(Gtk.Window):
       
         names = ["hola","adios","cosa","cosa fea","otra cosa","bieeen"]
         #GtkWidget *img;
+        pb = Pixbuf.new_from_file('../res/ugr_logo.jpg')
         img = Gtk.Image()
-        img.new_from_file('../res/ugr_logo.jpg')
+        img.set_from_pixbuf(pb)
         #self.box=Gtk.Box(spacing=6)
         #self.add(self.box)
         self.add(img)
-        self.table=Gtk.Table(2,3,True)
+        pass
+        self.table=Gtk.Table(2,2,True)
         self.add(self.table)
         i=0
         j=0
         for name in names:
-            button = Gtk.Button(label=name,stock=img)
+            button = Gtk.Button(label=name,image=img)
             button.connect("clicked", self.on_button_clicked)
+            Gtk.gtk_button_set_image(button,img)
             #Gtk.gtk_button_set_image(button,img)
             #button.set_image(img)
             #button.set_image(img)
