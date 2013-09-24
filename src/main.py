@@ -14,15 +14,17 @@ class gui(Gtk.Window):
       
         names = ["hola","adios","cosa","cosa fea","otra cosa","bieeen"]
         #GtkWidget *img;
-        img = Gtk.Image.new_from_file('../res/ugr_logo.jpg')
+        img = Gtk.Image()
+        img.new_from_file('../res/ugr_logo.jpg')
         #self.box=Gtk.Box(spacing=6)
         #self.add(self.box)
+        self.add(img)
         self.table=Gtk.Table(2,3,True)
         self.add(self.table)
         i=0
         j=0
         for name in names:
-            button = Gtk.Button(label=name,image=img)
+            button = Gtk.Button(label=name,stock=img)
             button.connect("clicked", self.on_button_clicked)
             #Gtk.gtk_button_set_image(button,img)
             #button.set_image(img)
