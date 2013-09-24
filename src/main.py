@@ -6,9 +6,8 @@ Created on 24/09/2013
 from gi.repository import Gtk
 
 def gui():
-
     def __init__(self):
-        Gtk.Window.__init__(self, title="Hello World")
+        Gtk.Window.__init__(self, title="UGROS")
         names = ["hola","adios","cosa"]
         for name in names:
             self.button = Gtk.Button(label=name)
