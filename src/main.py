@@ -23,7 +23,6 @@ class gui(Gtk.Window):
         #self.box=Gtk.Box(spacing=6)
         #self.add(self.box)
         self.add(img)
-        pass
         self.table=Gtk.Table(2,2,True)
         self.add(self.table)
         i=0
@@ -31,7 +30,6 @@ class gui(Gtk.Window):
         for name in names:
             button = Gtk.Button(label=name,image=img)
             button.connect("clicked", self.on_button_clicked)
-            Gtk.gtk_button_set_image(button,img)
             #Gtk.gtk_button_set_image(button,img)
             #button.set_image(img)
             #button.set_image(img)
