@@ -3,7 +3,10 @@ Created on 24/09/2013
 
 @author: Melon
 '''
-from gi.repository import *
+
+from gi.repository import Gtk
+from gi.repository.GdkPixbuf import Pixbuf
+
 
 class gui(Gtk.Window):
     def __init__(self):
