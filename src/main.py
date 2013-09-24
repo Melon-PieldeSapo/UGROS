@@ -8,8 +8,12 @@ from gi.repository import Gtk
 class gui(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="UGROS")
-        names = ["hola","adios","cosa","cosa fea","otra cosa","bieeen"]
         
+        #Gtk.Settings.set_string_property(gtk-button-images)
+        #gtk-button-images
+      
+        names = ["hola","adios","cosa","cosa fea","otra cosa","bieeen"]
+        img = Gtk.Image.new_from_file('../res/ugr_logo.jpg')
         #self.box=Gtk.Box(spacing=6)
         #self.add(self.box)
         self.table=Gtk.Table(2,3,True)
@@ -19,6 +23,7 @@ class gui(Gtk.Window):
         for name in names:
             button = Gtk.Button(label=name)
             button.connect("clicked", self.on_button_clicked)
+            button.set_image(img)
             #self.box.pack_start(self.button, True, True, 0)
             self.table.attach(button,i,i+1,j,j+1)
             i=i+1
