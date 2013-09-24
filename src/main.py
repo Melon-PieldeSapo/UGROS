@@ -15,7 +15,7 @@ class gui(Gtk.Window):
         for name in names:
             self.button = Gtk.Button(label=name)
             self.button.connect("clicked", self.on_button_clicked)
-            self.box.pack_start(self.button[name], True, True, 0)
+            self.box.pack_start(self.button, True, True, 0)
 
     def on_button_clicked(self, widget):
         print("Hello World")
