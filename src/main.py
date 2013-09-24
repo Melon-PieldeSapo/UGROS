@@ -5,14 +5,14 @@ Created on 24/09/2013
 '''
 from gi.repository import Gtk
 
-def gui():
+class gui(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="UGROS")
-        #names = ["hola","adios","cosa"]
-        #for name in names:
-        self.button = Gtk.Button(label=name)
-        self.button.connect("clicked", self.on_button_clicked)
-        self.add(self.button)
+        names = ["hola","adios","cosa"]
+        for name in names:
+            self.button = Gtk.Button(label=name)
+            self.button.connect("clicked", self.on_button_clicked)
+            self.add(self.button)
 
     def on_button_clicked(self, widget):
         print("Hello World")
