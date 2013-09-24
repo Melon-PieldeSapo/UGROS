@@ -23,7 +23,8 @@ class gui(Gtk.Window):
         for name in names:
             button = Gtk.Button(label=name)
             button.connect("clicked", self.on_button_clicked)
-            button.set_image(img)
+            Gtk.gtk_button_set_image(button,img)
+            # button.set_image(img)
             #self.box.pack_start(self.button, True, True, 0)
             self.table.attach(button,i,i+1,j,j+1)
             i=i+1
