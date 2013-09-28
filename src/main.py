@@ -46,9 +46,10 @@ class gui(Gtk.Window):
             if(i%2==0):
                 j=j+1
                 i=0
-    def on_img_click_event(self,widget):
+    def on_img_click_event(self,widget,e):
         print("Hello IMG")
-        print (widget)
+        print(widget)
+        print(e)
     def on_button_clicked(self, widget):
         print("Hello World")
         print (widget)
