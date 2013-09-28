@@ -28,7 +28,8 @@ class gui(Gtk.Window):
         for name in names:        
             img = Gtk.Image()
             img.set_from_pixbuf(pb)
-            box = Gtk.Box(spacing=6)
+            box = Gtk.EventBox(spacing=6) 
+            box.connect("img-clicked-event",self.on_img_click_event)
             box.pack_start(img,True,True,0)
             #button = Gtk.Button(label=name)
             #button.connect("clicked", self.on_button_clicked)
@@ -42,6 +43,9 @@ class gui(Gtk.Window):
             if(i%2==0):
                 j=j+1
                 i=0
+    def on_img_click_event(self,widget):
+        print("Hello IMG")
+        print (widget)
     def on_button_clicked(self, widget):
         print("Hello World")
         print (widget)
