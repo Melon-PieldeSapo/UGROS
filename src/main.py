@@ -18,8 +18,6 @@ class gui(Gtk.Window):
         names = ["hola","adios","cosa","cosa fea","otra cosa","bieeen"]
         #GtkWidget *img;
         pb = Pixbuf.new_from_file('../res/ugr_logo.jpg')
-        img = Gtk.Image()
-        img.set_from_pixbuf(pb)
         #self.box=Gtk.Box(spacing=6)
         #self.add(self.box)
         #self.add(img)
@@ -27,16 +25,18 @@ class gui(Gtk.Window):
         self.add(self.table)
         i=0
         j=0
-        for name in names:
+        for name in names:        
+            img = Gtk.Image()
+            img.set_from_pixbuf(pb)
             box = Gtk.Box(spacing=6)
             box.pack_start(img,True,True,0)
-            button = Gtk.Button(label=name,image=img)
-            button.connect("clicked", self.on_button_clicked)
+            #button = Gtk.Button(label=name)
+            #button.connect("clicked", self.on_button_clicked)
             #Gtk.gtk_button_set_image(button,img)
             #button.set_image(img)
             #button.set_image(img)
             #self.box.pack_start(self.button, True, True, 0)
-            box.pack_start(button,True,True,0)
+            #box.pack_start(button,True,True,0)
             self.table.attach(box,i,i+1,j,j+1)
             i=i+1
             if(i%2==0):
