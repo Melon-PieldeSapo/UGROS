@@ -29,7 +29,7 @@ class gui(Gtk.Window):
             img = Gtk.Image()
             img.set_from_pixbuf(pb)
             box = Gtk.Box(spacing=6) 
-            box.connect("img-clicked-event",self.on_img_click_event)
+            box.connect("button-press-event",self.on_img_click_event)
             box.pack_start(img,True,True,0)
             #button = Gtk.Button(label=name)
             #button.connect("clicked", self.on_button_clicked)
