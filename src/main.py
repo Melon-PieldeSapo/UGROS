@@ -32,7 +32,7 @@ class gui(Gtk.Window):
             eventbox = Gtk.EventBox()
             eventbox.connect("button-press-event", self.on_img_click_event)
             eventbox.add(img)
-            box.pack_start(eventbox, True, True, 0)
+            box.pack_start(eventbox, True, True, 5)
             #box.pack_start(img,True,True,0)
             #button = Gtk.Button(label=name)
             #button.connect("clicked", self.on_button_clicked)
@@ -46,10 +46,11 @@ class gui(Gtk.Window):
             if(i%2==0):
                 j=j+1
                 i=0
-    def on_img_click_event(self,widget,e):
+    def on_img_click_event(self,widget,event):
         print("Hello IMG")
         print(widget)
-        print(e)
+        print(event)
+        widget.set_visible(False)
     def on_button_clicked(self, widget):
         print("Hello World")
         print (widget)
